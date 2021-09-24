@@ -1,0 +1,40 @@
+<html>
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krop-Zadanie8-kod</title>
+</head>
+<body>
+    <textarea cols = 500 rows = 30>
+<head>
+ <meta charset="UTF-8">
+ <title>Zadanie 9</title>
+ </head>
+<body>
+<div style="color:red;font-size:31px;">
+ <script language="JavaScript">
+var D1_kro = prompt("Dzień 1 = ","");
+var D2_kro = prompt("Dzień 2 = ","");
+var G1_kro = prompt("Godzina 1 = ","");
+var G2_kro = prompt("Godzina 2 = ","");
+var Dni;
+var Godziny;
+var w = parseFloat(D1_kro);
+var x = parseFloat(D2_kro);
+var y = parseFloat(G1_kro);
+var z = parseFloat(G2_kro);
+Dni = w-x;
+Godziny = y-z;
+var sekundy = ((Dni * 86400) + (Godziny * 3600));
+document.write("D1 = " + w + "<br>");
+document.write("G1 = " + y + "<br>");
+document.write("D2 = " + x + "<br>");
+document.write("G2 = " + z + "<br>");
+document.write("Ilosc sekund = " + sekundy + " sekund");
+</script>
+</div>
+</body>
+</html>
