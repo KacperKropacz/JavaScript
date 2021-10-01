@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+ <head> 
+ <title> Użycie fukcji </title>
+ <meta charset="utf-8">
+ </head>
+<body>
+ <div style="color:navy;font-size:50px;">
+ <script language="JavaScript">
+ var a=parseFloat(prompt("a=",""));
+ var b=parseFloat(prompt("b=",""));
+ function suma_kro(a, b) {
+ return a + b;
+ }
+ function roznica_kro(a, b) {
+ return a - b;
+ }
+ function iloczyn_kro(a, b) {
+ return a * b;
+ }
+ function kwadrat_kro(a) {
+ return a * a;
+ }
+ function kwadrat1_kro(b) {
+ return b * b;
+ }
+ document.write("Wynik dodawania wynosi "+suma_kro(a, b)+"<br>");
+ document.write("Wynik odejmowania wynosi "+roznica_kro(a, b)+"<br>");
+ document.write("Wynik mnożenia wynosi "+iloczyn_kro(a, b)+"<br>");
+ document.write("Wynik kwadratu pierwszego wynosi "+kwadrat_kro(a)+"<br>");
+ document.write("Wynik kwadratu drugiego wynosi "+kwadrat1_kro(b)+"<br>");
+</script>
+</div>
+</body>
+</html>
