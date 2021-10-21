@@ -1,0 +1,59 @@
+﻿<html>
+<head>
+<title>Pole i Obwod Trapezu</title>
+<script language="JavaScript">
+function pole_kropacz(a_krop,b_krop,h_krop)
+{
+a_krop=parseFloat(Math.abs(a_krop));
+b_krop=parseFloat(Math.abs(b_krop));
+h_krop=parseFloat(Math.abs(h_krop));
+wynik = ((a_krop + b_krop) * h_krop) / 2;
+document.getElementsByName('pole')[0].value=wynik.toFixed(2);
+wyprowadz_pole_krop.innerHTML="Pole="+wynik.toFixed(2)+" cm2"+"<br>"; 
+}
+function obwod_kropacz(a_krop,b_krop,h_krop)
+{
+a_krop=parseFloat(Math.abs(a_krop));
+b_krop=parseFloat(Math.abs(b_krop));
+h_krop=parseFloat(Math.abs(h_krop));
+if (a_krop <= b_krop)
+{
+var x = (b_krop - a_krop) / 2;
+var c = Math.sqrt(x * x + h_krop * h_krop);
+wynik = a_krop + b_krop + (c * 2);
+}
+if (b_krop <= a_krop)
+{
+var x = (a_krop - b_krop) / 2;
+var c = Math.sqrt(x * x + h_krop * h_krop);
+wynik = a_krop + b_krop + (c * 2);
+}
+document.getElementsByName('obw')[0].value=wynik.toFixed(2); 
+wyprowadz_obwod_krop.innerHTML="Obwod="+wynik.toFixed(2)+" cm"+"<br>"; 
+}
+</script>
+</head>
+<body>
+<form name="formularz" action="..." onsubmit="pole_kropacz(this.a_dana_krop.value,this.b_dana_krop.value,this.h_dana_krop.value); obwod_kropacz(this.a_dana_krop.value,this.b_dana_krop.value,this.h_dana_krop.value);return false">
+Podaj a=
+<input size="6" name="a_dana_krop">
+Podaj b=
+<input size="6" name="b_dana_krop">
+Podaj h=
+<input size="6" name="h_dana_krop">
+<br>
+<br>
+<input TYPE="submit" Value="oblicz" >
+<br>
+<br>
+Pole =
+<input size="6" name="pole">
+Obwod =
+<input size="6" name="obw">
+</form>
+<table>
+<tr id="wyprowadz_pole_krop"></tr>
+<tr id="wyprowadz_obwod_krop"></tr>
+</table>
+</body>
+</html>

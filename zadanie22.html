@@ -1,0 +1,52 @@
+﻿<html>
+<head>
+<title>Artur i Dawid</title>
+<script language="JavaScript">
+
+function wysokosc_kropacz(a_krop,b_krop)
+{
+a_krop=parseFloat(a_krop);
+b_krop=parseFloat(b_krop);
+
+wynik = Math.sqrt(b_krop * b_krop - a_krop * a_krop );
+document.getElementsByName('wysokosc')[0].value=wynik.toFixed(2); 
+wyprowadz_wys_krop.innerHTML="Wysokosc="+wynik.toFixed(2)+" m"+"<br>"; 
+}
+
+
+function alfa_kropacz(a_krop,b_krop)
+{
+a_krop=parseFloat(a_krop);
+b_krop=parseFloat(b_krop);
+
+rady = Math.asin(a_krop / b_krop);
+wynik = rady * (180/Math.PI);
+
+document.getElementsByName('alfa')[0].value=wynik.toFixed(2); 
+wyprowadz_alfe_krop.innerHTML="Stopnie="+wynik.toFixed(2)+" °"+"<br>"; 
+}
+
+</script>
+</head>
+<body>
+<form name="formularz" action="..." onsubmit="wysokosc_kropacz(this.a_dana_krop.value,this.b_dana_krop.value); alfa_kropacz(this.a_dana_krop.value,this.b_dana_krop.value);return false">
+Podaj odleglosc=
+<input size="6" name="a_dana_krop">
+Podaj droge=
+<input size="6" name="b_dana_krop">
+<br>
+<br>
+<input TYPE="submit" Value="oblicz" >
+<br>
+<br>
+Wysokosc =
+<input size="6" name="wysokosc">
+Kat startu=
+<input size="6" name="alfa">
+</form>
+<table>
+<tr id="wyprowadz_wys_krop"></tr> 
+<tr id="wyprowadz_alfe_krop"></tr> 
+</table>
+</body>
+</html>

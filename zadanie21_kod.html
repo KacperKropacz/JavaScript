@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krop-Zadanie21-kod</title>
+</head>
+<body>
+    <textarea cols = 500 rows = 30>
+<html>
+<head>
+<title>Zadanie z drabiną</title>
+<script>
+function drabina_kropacz(a_krop,b_krop)
+{
+a_krop=parseFloat(a_krop);
+b_krop=parseFloat(b_krop);
+wynik = Math.sqrt( a_krop * a_krop + b_krop * b_krop)
+document.getElementsByName('drabina')[0].value=wynik.toFixed(2); 
+wyprowadz_drabine_krop.innerHTML="Drabina="+wynik.toFixed(2)+" m"+"<br>"; 
+}
+function alfa_kropacz(a_krop,b_krop)
+{
+a_krop=parseFloat(a_krop);
+b_krop=parseFloat(b_krop);
+radiany = Math.atan2(a_krop, b_krop);
+wynik = radiany * (180/Math.PI);
+document.getElementsByName('alfa')[0].value=wynik.toFixed(2); 
+wyprowadz_alfe_krop.innerHTML="Kąt nachylenia drabiny="+wynik.toFixed(2)+" °"+"<br>"; 
+}
+</script>
+</head>
+<body>
+<form name="formularz" action="..." onsubmit="drabina_kropacz(this.a_dana_krop.value,this.b_dana_krop.value); alfa_kropacz(this.a_dana_krop.value,this.b_dana_krop.value);return false">
+Podaj D=
+<input size="6" name="a_dana_krop">
+Podaj x=
+<input size="6" name="b_dana_krop">
+<br>
+<br>
+<input TYPE="submit" Value="oblicz" >
+<br>
+<br>
+Drabina=
+<input size="6" name="drabina">
+Alfa=
+<input size="6" name="alfa">
+</form>
+<table>
+<tr id="wyprowadz_drabine_krop"></tr> 
+<tr id="wyprowadz_alfe_krop"></tr> 
+</table>
+</body>
+</html>
