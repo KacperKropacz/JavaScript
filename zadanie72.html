@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Zadanie 72</title>
+<script>
+var gna = false;
+while (!gna)
+{
+var l1_t_kro = prompt("Podaj pierwsza liczbe:");
+var l2_t_kro = prompt("Podaj druga liczba:");
+ if ( l1_t_kro < 20 || l1_t_kro > 60 || l2_t_kro < 20 || l2_t_kro > 60)
+{
+alert("Liczby nie pasuja do przedzialu 20 - 60!!!");
+} 
+else 
+{
+gna = true;
+}
+}
+var pocz_kro = prompt("Podaj wielkosc poczatkowa tekstu:");
+var tekst_kro = prompt("Wprowadz tekst:");
+var i = pocz_kro
+if (l2_t_kro <= l1_t_kro)
+{
+for(; i > 0; i -= 5)
+{
+document.write("<p style=\"font-size:"+i+"px; color: black;\"><br>"+tekst_kro+"<br></p>");
+}
+}
+if(l1_t_kro < l2_t_kro)
+{
+ for(; i < 100; i += 5)
+{
+document.write("<p style=\"font-size:"+i+"px; color: black;\"><br>"+tekst_kro+"<br></p>");
+}
+}
+</script>
+</head>
+<body>
+</body>
+</html>

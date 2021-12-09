@@ -1,0 +1,36 @@
+<html> 
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+<div style="color:black;font-size:25px;">
+<script language="JavaScript">
+var a = prompt("Podaj szerokosc prostokata: ");
+var b = prompt("Podaj dlugosc prostokata: ");
+for(i=0; i<b; i++)
+document.write("*");
+document.write("*");
+document.write("<br>");
+for(i = 0; i < a; i++)
+{
+for(j = 0; j < b; j++)
+{
+if (j == 0)
+document.write("*");
+else 
+{
+document.write("&ensp;");
+}
+if (j == b - 1)
+document.write("*");
+}
+document.write("<br>");
+}
+for(i = 0; i < b; i++)
+document.write("*");
+document.write("*");
+document.write("<br>");
+</script>
+</div>
+</body>
+</html>
